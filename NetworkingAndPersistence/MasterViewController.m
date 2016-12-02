@@ -8,13 +8,26 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "CompanyStorage.h"
+#import "CompanyStorage+UserDefault.h"
+#import "Company.h"
+#import "CompanyManagedObject.h"
+#import "NetworkAdaptor.h"
+#import "CompanyTableViewCell.h"
+#import "CompanyStoreOperation.h"
+#import "NetworkOperation.h"
+#import "MasterViewDataSource.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property (nonatomic, strong, nonnull) CompanyStorage *companyStorage;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property (nonatomic, strong) MasterViewDataSource *dataSource;
 @end
 
 @implementation MasterViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +37,85 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.companyStorage = [[CompanyStorage alloc] init];
+    if (!self.operationQueue) {
+        self.operationQueue = [[NSOperationQueue alloc] init];
+    }
+    
+    self.dataSource = [[MasterViewDataSource alloc] initWithTableView:self.tableView];
+    self.dataSource.configureCellBlock = ^(CompanyTableViewCell *cell , Company *company) {
+        [cell setCellFromCompany:company];
+    };
+    
+    self.tableView.dataSource = self.dataSource;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didEnterBackground)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(willEnterForegound)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+
+    
+    // core data
+    
+    [self.dataSource fetchData];
+    
+//    if ([self.companyStorage checkIfThereIsObject]) {
+//        [self.companyStorage fetchCompanyListWithCompletionHander:^(NSArray * _Nonnull list) {
+//            self.objects = [NSMutableArray arrayWithArray:list];
+//            [self.tableView reloadData];
+//        }];
+//    } else {
+//        __block CompanyStoreOperation *operation = [[CompanyStoreOperation alloc] initWithStorage:self.companyStorage andCompanies:self.objects];
+//        NetworkOperation *netWorkOperation = [[NetworkOperation alloc] initWithHandler:^(NSArray * list) {
+//            self.objects = [NSMutableArray arrayWithArray:list];
+//            [operation setCompanies:list];
+//            //[self.tableView reloadData];
+//        } andURLString:@"http://gomashup.com/json.php?fds=finance/fortune500/year/2008"];
+//        
+//        
+//        [operation addDependency:netWorkOperation];
+//        
+//        [self.operationQueue addOperation:netWorkOperation];
+//        [self.operationQueue addOperation:operation];
+    
+//        [[NetworkAdaptor sharedInstance] remotelyFetchDataWithURLString:@"http://gomashup.com/json.php?fds=finance/fortune500/year/2008" andComplationHandler:^(NSArray * _Nonnull list) {
+//            
+//            // core Data
+//            CompanyStoreOperation *operation = [[CompanyStoreOperation alloc] initWithStorage:self.companyStorage andCompanies:list];
+//            [self.operationQueue addOperation:operation];
+//            //[self.companyStorage saveCompanies:list];
+//            self.objects = [NSMutableArray arrayWithArray:list];
+//            [self.tableView reloadData];
+//        }];
+//    }
+    
+    // NSUser default
+//    NSArray *cache = [self.companyStorage getListByUserDefault];
+//    if (cache != nil && [cache count] > 0) {
+//        self.objects = [NSMutableArray arrayWithArray:cache];
+//    } else {
+//        [[NetworkAdaptor sharedInstance] remotelyFetchDataWithURLString:@"http://gomashup.com/json.php?fds=finance/fortune500/year/2008" andComplationHandler:^(NSArray * _Nonnull list) {
+//
+//            [self.companyStorage saveCompaniesUsingUD:list];
+//            self.objects = [NSMutableArray arrayWithArray:list];
+//            [self.tableView reloadData];
+//        }];
+//
+//    }
+    
+    [self.tableView registerClass:[CompanyTableViewCell class] forCellReuseIdentifier:@"companyCell"];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    NSArray *result = [self.companyStorage fetchCompanyList];
+//    CompanyManagedObject *company = [result firstObject];
+//    NSLog(@"year : %@", company.year);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,12 +129,8 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.dataSource insertNewRow];
+    
 }
 
 #pragma mark - Segues
@@ -58,36 +146,15 @@
     }
 }
 
-#pragma mark - Table View
+#pragma -mark Background
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void) didEnterBackground {
+    [self.dataSource didiEnterBG];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+- (void) willEnterForegound {
+    [self.dataSource willEnterFG];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
-    return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
 
 @end

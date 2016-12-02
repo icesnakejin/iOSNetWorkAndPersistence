@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2902121DE4C47B00FB2126 /* objectDependencyConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2902111DE4C47B00FB2126 /* objectDependencyConstructor.m */; };
 		7D2DE0831DE12C370073D290 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0821DE12C370073D290 /* main.m */; };
 		7D2DE0861DE12C370073D290 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0851DE12C370073D290 /* AppDelegate.m */; };
 		7D2DE0891DE12C370073D290 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0881DE12C370073D290 /* MasterViewController.m */; };
@@ -16,6 +17,18 @@
 		7D2DE0941DE12C370073D290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2DE0921DE12C370073D290 /* LaunchScreen.storyboard */; };
 		7D2DE09F1DE12C370073D290 /* NetworkingAndPersistenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE09E1DE12C370073D290 /* NetworkingAndPersistenceTests.m */; };
 		7D2DE0AA1DE12C370073D290 /* NetworkingAndPersistenceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0A91DE12C370073D290 /* NetworkingAndPersistenceUITests.m */; };
+		7D2DE0BE1DE12E1A0073D290 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0BD1DE12E1A0073D290 /* Company.m */; };
+		7D2DE0C11DE12EB70073D290 /* CompanyManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0C01DE12EB70073D290 /* CompanyManagedObject.m */; };
+		7D2DE0C41DE134090073D290 /* CompanyStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0C31DE134090073D290 /* CompanyStorage.m */; };
+		7D2DE0C81DE26CED0073D290 /* NetworkAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0C71DE26CED0073D290 /* NetworkAdaptor.m */; };
+		7D2DE0CB1DE27EBC0073D290 /* CompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0CA1DE27EBC0073D290 /* CompanyTableViewCell.m */; };
+		7D2DE0D21DE36B910073D290 /* CompanyStorage+UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0D11DE36B910073D290 /* CompanyStorage+UserDefault.m */; };
+		7D2DE0D51DE3C9320073D290 /* CompanyStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0D41DE3C9320073D290 /* CompanyStoreOperation.m */; };
+		7D2DE0D81DE3C96D0073D290 /* NetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0D71DE3C96D0073D290 /* NetworkOperation.m */; };
+		7D2DE0DC1DE3ECAE0073D290 /* MasterViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DE0DB1DE3ECAE0073D290 /* MasterViewDataSource.m */; };
+		7DA7AA071DF107CC00A6BCFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7AA051DF107CC00A6BCFE /* Model.xcdatamodeld */; };
+		7DA7AA121DF1083C00A6BCFE /* NCompany+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7AA0F1DF1083C00A6BCFE /* NCompany+CoreDataProperties.m */; };
+		7DA7AA131DF1083C00A6BCFE /* NCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7AA111DF1083C00A6BCFE /* NCompany.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D2902101DE4C47B00FB2126 /* objectDependencyConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectDependencyConstructor.h; sourceTree = "<group>"; };
+		7D2902111DE4C47B00FB2126 /* objectDependencyConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objectDependencyConstructor.m; sourceTree = "<group>"; };
 		7D2DE07E1DE12C370073D290 /* NetworkingAndPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingAndPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2DE0821DE12C370073D290 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D2DE0841DE12C370073D290 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +69,30 @@
 		7D2DE0A51DE12C370073D290 /* NetworkingAndPersistenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingAndPersistenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2DE0A91DE12C370073D290 /* NetworkingAndPersistenceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingAndPersistenceUITests.m; sourceTree = "<group>"; };
 		7D2DE0AB1DE12C370073D290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2DE0BC1DE12E1A0073D290 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		7D2DE0BD1DE12E1A0073D290 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		7D2DE0BF1DE12EB70073D290 /* CompanyManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyManagedObject.h; sourceTree = "<group>"; };
+		7D2DE0C01DE12EB70073D290 /* CompanyManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyManagedObject.m; sourceTree = "<group>"; };
+		7D2DE0C21DE134090073D290 /* CompanyStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyStorage.h; sourceTree = "<group>"; };
+		7D2DE0C31DE134090073D290 /* CompanyStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyStorage.m; sourceTree = "<group>"; };
+		7D2DE0C61DE26CED0073D290 /* NetworkAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkAdaptor.h; sourceTree = "<group>"; };
+		7D2DE0C71DE26CED0073D290 /* NetworkAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkAdaptor.m; sourceTree = "<group>"; };
+		7D2DE0C91DE27EBC0073D290 /* CompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTableViewCell.h; sourceTree = "<group>"; };
+		7D2DE0CA1DE27EBC0073D290 /* CompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyTableViewCell.m; sourceTree = "<group>"; };
+		7D2DE0D01DE36B910073D290 /* CompanyStorage+UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CompanyStorage+UserDefault.h"; sourceTree = "<group>"; };
+		7D2DE0D11DE36B910073D290 /* CompanyStorage+UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CompanyStorage+UserDefault.m"; sourceTree = "<group>"; };
+		7D2DE0D31DE3C9320073D290 /* CompanyStoreOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyStoreOperation.h; sourceTree = "<group>"; };
+		7D2DE0D41DE3C9320073D290 /* CompanyStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyStoreOperation.m; sourceTree = "<group>"; };
+		7D2DE0D61DE3C96D0073D290 /* NetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkOperation.h; sourceTree = "<group>"; };
+		7D2DE0D71DE3C96D0073D290 /* NetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkOperation.m; sourceTree = "<group>"; };
+		7D2DE0DA1DE3ECAE0073D290 /* MasterViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewDataSource.h; sourceTree = "<group>"; };
+		7D2DE0DB1DE3ECAE0073D290 /* MasterViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewDataSource.m; sourceTree = "<group>"; };
+		7D8EC51E1DF104050061D514 /* NetworkingAndPersistence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetworkingAndPersistence-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DA7AA061DF107CC00A6BCFE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7DA7AA0E1DF1083C00A6BCFE /* NCompany+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCompany+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7DA7AA0F1DF1083C00A6BCFE /* NCompany+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCompany+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7DA7AA101DF1083C00A6BCFE /* NCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCompany.h; sourceTree = "<group>"; };
+		7DA7AA111DF1083C00A6BCFE /* NCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCompany.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +120,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D29020F1DE4C39700FB2126 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				7D2902101DE4C47B00FB2126 /* objectDependencyConstructor.h */,
+				7D2902111DE4C47B00FB2126 /* objectDependencyConstructor.m */,
+			);
+			name = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		7D2DE0751DE12C370073D290 = {
 			isa = PBXGroup;
 			children = (
+				7DA7AA0E1DF1083C00A6BCFE /* NCompany+CoreDataProperties.h */,
+				7DA7AA0F1DF1083C00A6BCFE /* NCompany+CoreDataProperties.m */,
+				7DA7AA101DF1083C00A6BCFE /* NCompany.h */,
+				7DA7AA111DF1083C00A6BCFE /* NCompany.m */,
 				7D2DE0801DE12C370073D290 /* NetworkingAndPersistence */,
 				7D2DE09D1DE12C370073D290 /* NetworkingAndPersistenceTests */,
 				7D2DE0A81DE12C370073D290 /* NetworkingAndPersistenceUITests */,
 				7D2DE07F1DE12C370073D290 /* Products */,
+				7D8EC51E1DF104050061D514 /* NetworkingAndPersistence-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +157,14 @@
 		7D2DE0801DE12C370073D290 /* NetworkingAndPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				7D2DE0841DE12C370073D290 /* AppDelegate.h */,
+				7D29020F1DE4C39700FB2126 /* DependencyInjection */,
+				7D2DE0CC1DE2813A0073D290 /* View */,
+				7D2DE0C51DE155A80073D290 /* Networking */,
+				7D2DE0B81DE12C4E0073D290 /* Storage */,
+				7D2DE0B71DE12C430073D290 /* Model */,
+				7D2DE0D91DE3EC6F0073D290 /* View Model */,
 				7D2DE0851DE12C370073D290 /* AppDelegate.m */,
+				7D2DE0841DE12C370073D290 /* AppDelegate.h */,
 				7D2DE0871DE12C370073D290 /* MasterViewController.h */,
 				7D2DE0881DE12C370073D290 /* MasterViewController.m */,
 				7D2DE08A1DE12C370073D290 /* DetailViewController.h */,
@@ -143,6 +202,60 @@
 				7D2DE0AB1DE12C370073D290 /* Info.plist */,
 			);
 			path = NetworkingAndPersistenceUITests;
+			sourceTree = "<group>";
+		};
+		7D2DE0B71DE12C430073D290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DE0BC1DE12E1A0073D290 /* Company.h */,
+				7D2DE0BD1DE12E1A0073D290 /* Company.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7D2DE0B81DE12C4E0073D290 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DE0BF1DE12EB70073D290 /* CompanyManagedObject.h */,
+				7D2DE0C01DE12EB70073D290 /* CompanyManagedObject.m */,
+				7D2DE0C21DE134090073D290 /* CompanyStorage.h */,
+				7D2DE0D01DE36B910073D290 /* CompanyStorage+UserDefault.h */,
+				7D2DE0D11DE36B910073D290 /* CompanyStorage+UserDefault.m */,
+				7D2DE0C31DE134090073D290 /* CompanyStorage.m */,
+				7D2DE0D31DE3C9320073D290 /* CompanyStoreOperation.h */,
+				7D2DE0D41DE3C9320073D290 /* CompanyStoreOperation.m */,
+				7DA7AA051DF107CC00A6BCFE /* Model.xcdatamodeld */,
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
+		7D2DE0C51DE155A80073D290 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DE0C61DE26CED0073D290 /* NetworkAdaptor.h */,
+				7D2DE0C71DE26CED0073D290 /* NetworkAdaptor.m */,
+				7D2DE0D61DE3C96D0073D290 /* NetworkOperation.h */,
+				7D2DE0D71DE3C96D0073D290 /* NetworkOperation.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		7D2DE0CC1DE2813A0073D290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DE0C91DE27EBC0073D290 /* CompanyTableViewCell.h */,
+				7D2DE0CA1DE27EBC0073D290 /* CompanyTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7D2DE0D91DE3EC6F0073D290 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DE0DA1DE3ECAE0073D290 /* MasterViewDataSource.h */,
+				7D2DE0DB1DE3ECAE0073D290 /* MasterViewDataSource.m */,
+			);
+			name = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +325,7 @@
 				TargetAttributes = {
 					7D2DE07D1DE12C370073D290 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					7D2DE0991DE12C370073D290 = {
 						CreatedOnToolsVersion = 7.3;
@@ -275,9 +389,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2DE0D21DE36B910073D290 /* CompanyStorage+UserDefault.m in Sources */,
+				7D2DE0C81DE26CED0073D290 /* NetworkAdaptor.m in Sources */,
+				7DA7AA071DF107CC00A6BCFE /* Model.xcdatamodeld in Sources */,
+				7D2DE0CB1DE27EBC0073D290 /* CompanyTableViewCell.m in Sources */,
 				7D2DE0861DE12C370073D290 /* AppDelegate.m in Sources */,
+				7D2DE0D81DE3C96D0073D290 /* NetworkOperation.m in Sources */,
+				7D2DE0BE1DE12E1A0073D290 /* Company.m in Sources */,
+				7D2DE0D51DE3C9320073D290 /* CompanyStoreOperation.m in Sources */,
+				7DA7AA121DF1083C00A6BCFE /* NCompany+CoreDataProperties.m in Sources */,
+				7DA7AA131DF1083C00A6BCFE /* NCompany.m in Sources */,
+				7D2DE0C11DE12EB70073D290 /* CompanyManagedObject.m in Sources */,
+				7D2902121DE4C47B00FB2126 /* objectDependencyConstructor.m in Sources */,
 				7D2DE0891DE12C370073D290 /* MasterViewController.m in Sources */,
 				7D2DE0831DE12C370073D290 /* main.m in Sources */,
+				7D2DE0DC1DE3ECAE0073D290 /* MasterViewDataSource.m in Sources */,
+				7D2DE0C41DE134090073D290 /* CompanyStorage.m in Sources */,
 				7D2DE08C1DE12C370073D290 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,10 +548,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NetworkingAndPersistence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yankunjin.NetworkingAndPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkingAndPersistence-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -432,10 +563,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NetworkingAndPersistence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yankunjin.NetworkingAndPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkingAndPersistence-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -504,6 +638,7 @@
 				7D2DE0B01DE12C370073D290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D2DE0B11DE12C370073D290 /* Build configuration list for PBXNativeTarget "NetworkingAndPersistenceTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +647,7 @@
 				7D2DE0B31DE12C370073D290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D2DE0B41DE12C370073D290 /* Build configuration list for PBXNativeTarget "NetworkingAndPersistenceUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,8 +656,22 @@
 				7D2DE0B61DE12C370073D290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7DA7AA051DF107CC00A6BCFE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7DA7AA061DF107CC00A6BCFE /* Model.xcdatamodel */,
+			);
+			currentVersion = 7DA7AA061DF107CC00A6BCFE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7D2DE0761DE12C370073D290 /* Project object */;
 }
